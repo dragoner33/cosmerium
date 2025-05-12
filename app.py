@@ -131,6 +131,16 @@ def comerciante():
 def guardia():
     return render_template('guardia.html')
     
+# Página del Lore primera
+@app.route('/lore1')
+def lore1():
+    return render_template('lore.html')
+    
+# Página del Lore segunda
+@app.route('/lore2')
+def lore2():
+    return render_template('lore2.html')
+    
     
 
 
