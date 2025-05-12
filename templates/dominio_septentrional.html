@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humano - Dominio Septentrional</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="raza">
+
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <h1>Humano | Dominio Septentrional</h1>
+
+    <div class="oriental-contenedor">
+        <div class="oriental-imagen">
+            <img src="{{ url_for('static', filename='images/septentrional.png') }}" alt="Septentrional">
+        </div>
+
+        <div class="oriental-tarjetas">
+            <div class="oriental-card">
+                <h2>Región</h2>
+                <p>
+					El Dominio Septentrional se extiende por una zona montañosa y de climas extremos, limítrofe con el Dominio de Terris pero con una identidad cultural propia. Aunque su historia se ha visto influenciada por la cercanía de Terris, los humanos de este dominio no comparten necesariamente la espiritualidad o el misticismo terrisano. En cambio, se definen por su resistencia, pragmatismo y la vida dura en regiones poco urbanizadas, a menudo autosuficientes y aisladas.
+					Durante generaciones, han sobrevivido en condiciones difíciles, desarrollando comunidades pequeñas pero fuertes, a menudo dedicadas a la minería, la ganadería de altura o la caza. Muchos de ellos ven con cierto recelo a Elendel, y aún más a los terrisanos, a quienes consideran “tocados por los dioses”.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Características físicas</h2>
+                <ul>
+                    <li><strong>Tonos de piel:</strong> Piel clara, a veces pálida por la escasa exposición solar. También son comunes tonos oliváceos o rojizos, sobre todo en familias que trabajan al aire libre.</li>
+                    <li><strong>Cabello:</strong>  Rubio ceniza, castaño claro o rojizo. A menudo espeso y ondulado, cortado de forma práctica.</li>
+                    <li><strong>Ojos:</strong> Predominan los ojos grises, azules y verde pino. Mirada intensa, acostumbrada al viento y la nieve.</li>
+                    <li><strong>Estatura:</strong> Promedio 165–180 cm.</li>
+                    <li><strong>Esperanza de vida:</strong> 70–80 años</li>
+                </ul>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Rasgos culturales</h2>
+                <p>
+                    <strong>Vestimenta:</strong> Prendas de lana gruesa, cuero y piel de animales. Predominan los colores apagados: gris, verde oscuro, marrón. Capas y guantes son comunes.<br>
+                    <strong>Religión:</strong> Creen en Armonía, pero con una interpretación más práctica. La espiritualidad es secundaria frente a la supervivencia. En zonas más aisladas, persisten tradiciones orales y supersticiones antiguas.<br>
+                    <strong>Actitudes:</strong> Reservados, leales, algo desconfiados hacia forasteros. Valoran el trabajo duro, la familia y el conocimiento transmitido entre generaciones.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Notas para el rol</h2>
+                <p>
+					Los personajes del Dominio Septentrional son perfectos para historias de supervivencia, exploración o incluso enfrentamientos con fuerzas del sur. Puedes interpretarlos como cazadores, guías, sabios rurales, soldados retirados o incluso rebeldes que no confían en ninguna de las grandes potencias del continente.               
+				</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

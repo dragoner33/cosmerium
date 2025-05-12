@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koloss</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="raza">
+
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <h1>Koloss</h1>
+
+    <div class="oriental-contenedor">
+        <div class="oriental-imagen">
+            <img src="{{ url_for('static', filename='images/koloss.png') }}" alt="Koloss">
+        </div>
+
+        <div class="oriental-tarjetas">
+            <div class="oriental-card">
+                <h2>Región</h2>
+                <p>
+					Los koloss verdaderos son humanos de sangre koloss que, al llegar a los doce años, eligen someterse al ritual de los clavos: una ceremonia tribal en la que reciben varios clavos hemalúrgicos en el cuerpo, provocando una transformación irreversible.
+Aunque el ritual los convierte en criaturas enormes, deformadas y de fuerza sobrehumana, aún conservan su humanidad, sus recuerdos y y su identidad. En la Era de Armonía, los koloss han formado tribus autónomas, regidas por líderes fuertes, códigos ancestrales y vínculos familiares. Son feroces, honorables a su manera, y absolutamente leales a los suyos.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Características físicas</h2>
+                <ul>
+                    <li><strong>Tonos de piel:</strong>Azul brillante o gris azulado. Cuanto más antiguos, más intenso el color.</li>
+                    <li><strong>Cabello:</strong>Escaso o ausente. Su cuero cabelludo suele estar marcado por cicatrices.</li>
+                    <li><strong>Ojos:</strong>Ojos pequeños, muchas veces con iris descolorido o vidrioso. La expresión es cruda, pero no carente de inteligencia.</li>
+                    <li><strong>Estatura:</strong> 2.5 a 3 metros</li>
+                    <li><strong>Esperanza de vida:</strong> Sin información </li>
+                </ul>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Rasgos culturales</h2>
+                <p>
+                    <strong>Tribalismo:</strong>La vida koloss gira en torno a la tribu. Hay clanes nómadas, guerreros, incluso comerciantes.<br>
+                    <strong>Código de fuerza:</strong>El liderazgo se gana por fuerza, pero también por sabiduría. No son simplemente brutos: respetan a quienes dominan su propia brutalidad.<br>
+                    <strong>Lengua y habla:</strong>Algunos koloss desarrollan habla torpe o simplificada, pero muchos, especialmente los jóvenes, se expresan con normalidad.<br>
+					<strong>Relación con armonía:</strong>Muchos koloss verdaderos ven a Armonía con respeto, pero no lo adoran como un dios. Lo consideran más como un protector lejano que les dio libertad.
+					<strong>Relación con los terrisanos: </strong> Los koloss verdaderos mantienen el voto ancestral de no dañar a los terrisanos, salvo en defensa propia.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Notas para el rol</h2>
+                <p>
+					<li> Un koloss con clavos es un personaje poderoso, pero también trágico. Ha sacrificado parte de su humanidad para pertenecer. Su alma está dividida, literalmente.
+Esto puede dar lugar a conflictos internos: ¿Es aún humano? ¿Es una bestia? ¿Es libre o prisionero de su propia fuerza?</li>
+					<li> En combate es brutal: puede levantar pesos imposibles, romper estructuras con sus manos, y soportar heridas que matarían a un humano normal. Pero también es blanco de odio, miedo y discriminación.
+					</li>
+					<li>Puede tener un trasfondo emocional profundo: haber perdido un hermano que no aceptó los clavos, querer proteger a los suyos, o desear comprender a los humanos más allá de los prejuicios.</li>
+				</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minero - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Minero</h1>
+        <p>
+		"El hombre no cava en la tierra por oro, cava para sobrevivir al mundo que lo ha olvidado." — A. V. Brelan
+		</p>
+        <p>Los pozos de Hatshin, cárceles hechas para la tortura de los hombres y mujeres donde se juegan la vida cada día, cada hora para extraer piedras preciosas, o incluso un material especial, divino, llamado, Atium. Son personas reemplazables, uno de los peores trabajos desde la antigüedad puesto que el sufrimiento físico, las heridas que puedes conseguir no son nada comparables con el beneficio que conseguirás. 
+Suelen estar expuestos a temperaturas muy altas en las profundidades de las minas, y suelen tener herramientas nefastas así que muchas veces usan sus propios brazos o piedras para abrirse paso para extraer las piedras preciosas.</p>
+		<p>
+		No te recomiendo este trabajo, chico, no por nada, si no porque no durarías nada, mi experiencia y edad me lo dicen, pero bueno, si quieres seguir adelante, no te lo voy a impedir, de hecho te felicito por tener las agallas necesarias. Por lo tanto, si quieres, preséntate en el 
+		<strong>cuartel de mineros,</strong>
+		ahí veremos a ver que tal y ya te diremos.
+		</p> 
+ <img src="{{ url_for('static', filename='images/minero.png') }}" alt="Minero" class="imagen-detalles-larga">
+    </div>
+
+</body>
+</html>

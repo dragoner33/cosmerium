@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humano - Dominio Central</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="raza">
+
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <h1>Humano | Dominio Central</h1>
+
+    <div class="oriental-contenedor">
+        <div class="oriental-imagen">
+            <img src="{{ url_for('static', filename='images/central.png') }}" alt="Central">
+        </div>
+
+        <div class="oriental-tarjetas">
+            <div class="oriental-card">
+                <h2>Región</h2>
+                <p>
+					Los humanos del Dominio Central (Dominio donde se centra el Servidor) son los descendientes directos de quienes habitaron las Tierras Centrales tras el Catacendro. Su cultura y presencia forman la base de la sociedad moderna de Scadrial en Era 2. Están fuertemente influenciados por la religión del Superviviente, el culto a Armonía y la revolución tecnológica impulsada por Elendel.
+					Son la etnia más común en las ciudades industrializadas, especialmente en Elendel, donde ocupan desde los puestos de poder político hasta las fábricas y barrios obreros. Su imagen es la del "ciudadano promedio" en la mayoría de los medios impresos, publicidad y literatura.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Características físicas</h2>
+                <ul>
+                    <li><strong>Tonos de piel:</strong> Varían entre piel clara a ligeramente bronceada, con tendencia a un tono intermedio. Las familias nobles tienden a tener la piel más clara, un vestigio del pasado imperial.</li>
+                    <li><strong>Cabello:</strong>  Castaño, negro o rubio oscuro son los más comunes. El pelo lacio o ligeramente ondulado predomina.</li>
+                    <li><strong>Ojos:</strong> Gama variada, aunque los ojos marrones y grises son los más frecuentes. Los ojos claros (azules o verdes) a veces son asociados con antiguos linajes nobiliarios.</li>
+                    <li><strong>Estatura:</strong> Promedio de 170–185 cm.</li>
+                    <li><strong>Esperanza de vida:</strong> 80–90 años</li>
+                </ul>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Rasgos culturales</h2>
+                <p>
+                    <strong>Vestimenta:</strong> Mezcla de atuendos victorianos con toques industriales: chalecos, sombreros, botas altas, faldas largas, y guantes para los de clase alta; ropa simple y práctica para los obreros.<br>
+                    <strong>Religión:</strong> La mayoría cree en Armonía, aunque algunos todavía veneran al Superviviente. También existen pequeñas sectas y cultos, algunos ilegales.<br>
+                    <strong>Actitudes:</strong> Tienen una mentalidad urbana, práctica y progresista, aunque tienden a desconfiar de los exteriores. Valoran la innovación, el orden y la estructura social.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Notas para el rol</h2>
+                <p>
+					Los scadrianos del Dominio Central son “el estándar” para muchos aspectos de la vida moderna en la Era 2. Son vistos como sofisticados y algo arrogantes por los habitantes de otros Dominios. Si decides interpretar un personaje de esta etnia, puedes optar por un enfoque más urbano, con conexiones al gobierno, las fábricas, las universidades o incluso las casas nobles.       
+				</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

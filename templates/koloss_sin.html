@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koloss nacidos sin clavo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="raza">
+
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <h1>Koloss nacidos sin clavo</h1>
+
+    <div class="oriental-contenedor">
+        <div class="oriental-imagen">
+            <img src="{{ url_for('static', filename='images/koloss_sin.png') }}" alt="Koloss_sin">
+        </div>
+
+        <div class="oriental-tarjetas">
+            <div class="oriental-card">
+                <h2>Región</h2>
+                <p>
+					Tras la Ascensión de Armonía, los koloss se transformaron en una raza reproductiva tribal, capaz de criar hijos propios. A diferencia de los koloss originales, creados con clavos hemalúrgicos, estos nuevos koloss nacen como humanos con herencia koloss.
+A la edad de doce años, cada joven koloss debe tomar una decisión: aceptar los clavos para convertirse en un koloss completo —grande, fuerte, deformado— o rechazarlos y abandonar la tribu para vivir como forastero, humanoide pero con sangre koloss.
+Este grupo de koloss nacidos que rehúsa los clavos es poco numeroso pero cada vez más visible. Algunos buscan integrarse en la sociedad humana, otros viven en pequeñas comunidades o incluso en las fronteras salvajes.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Características físicas</h2>
+                <ul>
+                    <li><strong>Tonos de piel:</strong> Generalmente pálida o con un ligero tinte gris azulado. </li>
+                    <li><strong>Cabello:</strong>Oscuro o grisáceo. En algunos casos, con alopecia prematura.</li>
+                    <li><strong>Ojos:</strong>Azul o rojo brillante, o gris pálido — un rasgo común entre los de sangre koloss. La mirada puede parecer “vacía” o demasiado intensa.</li>
+                    <li><strong>Estatura:</strong> Promedio 190–210 cm.</li>
+                    <li><strong>Esperanza de vida:</strong> Sin información </li>
+                </ul>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Rasgos culturales</h2>
+                <p>
+                    <strong>Orígenes tribales:</strong>Aunque son rechazados por su propia tribu al no aceptar los clavos, la mayoría conserva enseñanzas, leyendas y ritos koloss.<br>
+                    <strong>Código de honor:</strong>Muchos mantienen los valores tradicionales de la tribu: fuerza, resistencia, y franqueza.<br>
+                    <strong>Estigma social:</strong>A menudo son vistos con desconfianza tanto por humanos como por koloss completos. Algunos los llaman "mitad sangre", "blandos" o "falsos".<br>
+					<strong>Relación con los terrisanos:</strong>Por tradición tribal, los koloss —incluidos los nacidos sin clavos— no atacan a los terrisanos.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Notas para el rol</h2>
+                <p>
+					<li> Un personaje koloss sin clavos puede explorar el conflicto entre su naturaleza brutal y su humanidad conservada. Puede ser un nómada, mercenario, protector, maestro de armas o incluso erudito errante que busca reconciliar su herencia con el mundo civilizado.</li>
+					<li>Si tu personaje tiene sangre koloss pero no aceptó los clavos:
+						<br> - Puede conservar rasgos físicos notables (altura, fuerza, ojos extraños).
+						<br> - No sufre la deformación completa de los koloss “clavados”.
+						<br> - Es totalmente libre de desarrollar una personalidad individual, lejos de la mentalidad tribal.
+					</li>
+					<li>Puedes justificar cualquier tipo de motivación para rechazar los clavos: miedo, deseo de libertad, contacto temprano con humanos, o incluso una visión espiritual distinta.</li>
+				</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humano - Dominio Occidental</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="raza">
+
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <h1>Humano | Dominio Occidental</h1>
+
+    <div class="oriental-contenedor">
+        <div class="oriental-imagen">
+            <img src="{{ url_for('static', filename='images/occidental.png') }}" alt="Occidental">
+        </div>
+
+        <div class="oriental-tarjetas">
+            <div class="oriental-card">
+                <h2>Región</h2>
+                <p>
+					El Dominio Occidental es conocido por su espíritu independiente, su creciente poder industrial y su rivalidad política con Elendel. Ciudades como Bilming han florecido tras siglos de expansión, desarrollando una cultura propia, más pragmática y nacionalista. Son más cercanos a los avances tecnológicos recientes y han abrazado con fuerza la revolución de la electricidad y la automatización.
+					Aunque comparten raíces con los habitantes del Dominio Central, han desarrollado rasgos físicos y culturales únicos, en parte por mezcla con otros grupos durante las migraciones post-Catacendro.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Características físicas</h2>
+                <ul>
+                    <li><strong>Tonos de piel:</strong> Desde bronceados a morenos, con mayor exposición solar debido a las condiciones del oeste y trabajos más físicos.</li>
+                    <li><strong>Cabello:</strong>Oscuro (negro o castaño profundo) y más grueso. Ocasionalmente se observan tonos rojizos, indicativos de linajes cruzados con grupos de los Territorios Lejanos.</li>
+                    <li><strong>Ojos:</strong>Colores intensos como ámbar, verde oscuro, o avellana. En general, menos comunes los ojos azules o grises que en el Dominio Central.</li>
+                    <li><strong>Estatura:</strong> Ligeramente más bajos que los de Elendel. Promedio de 165–180 cm.</li>
+                    <li><strong>Esperanza de vida:</strong> 75–85 años</li>
+                </ul>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Rasgos culturales</h2>
+                <p>
+                    <strong>Vestimenta:</strong> Más funcional y menos refinado. Se valora la ropa resistente, de cuero, lana o lino. Los sombreros de ala ancha, chaquetas robustas y botas son comunes.<br>
+                    <strong>Religión:</strong> La devoción a Armonía es más institucional y menos fervorosa que en Elendel. Algunas ciudades, como Bilming, están empezando a cuestionar abiertamente su influencia. El culto al Superviviente es menos común, pero persiste en círculos obreros.<br>
+                    <strong>Actitudes:</strong> Tienen una fuerte identidad regional. Se ven a sí mismos como autosuficientes, resilientes y prácticos. Su desconfianza hacia el gobierno central ha generado movimientos independentistas.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Notas para el rol</h2>
+                <p>
+					Los personajes del Dominio Occidental pueden tener una actitud más directa, menos idealista que sus contrapartes del Dominio Central. Pueden estar involucrados en negocios independientes, exploración, desarrollo tecnológico o movimientos políticos. La tensión con Elendel es un buen trasfondo para cualquier personaje que venga del oeste.        
+				</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

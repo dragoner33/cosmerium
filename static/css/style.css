@@ -1,0 +1,358 @@
+body {
+    background: url("/static/fondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    backdrop-filter: brightness(0.8);
+    overflow-x: hidden; /* Elimina la barra de desplazamiento horizontal */
+}
+
+.titulo {
+    background-color: rgba(0, 0, 0, 0.6); /* negro con transparencia */
+    color: #ffffff;
+    font-size: 3em;
+    padding: 20px 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 0 15px #000;
+    text-shadow: 2px 2px 6px #000;
+}
+
+.presentacion {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #555;
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    margin-bottom: 30px;
+}
+
+/* Estilo para el menú de navegación */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #d54e21;
+}
+
+/* Menú desplegable */
+.submenu {
+    display: none; /* El submenú está oculto por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    width: 450px; /* Ancho del submenú */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 10px; /* Espacio entre los elementos */
+    grid-auto-rows: auto; /* Fila automática */
+}
+
+/* El submenú solo se muestra cuando se pasa el ratón sobre el li del menú */
+.navbar ul li:hover .submenu {
+    display: block; /* El submenú se muestra cuando el ratón pasa por encima del li */
+}
+
+/* Aseguramos que el submenú está oculto cuando no se pasa el ratón */
+.navbar ul li .submenu {
+    visibility: hidden;
+}
+
+/* Cuando el ratón pasa por el li, hacemos visible el submenú */
+.navbar ul li:hover .submenu {
+    visibility: visible;
+}
+
+/* Estilo para los elementos dentro del submenú */
+.submenu li {
+    list-style: none;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Estilo de los enlaces dentro del submenú */
+.submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el ratón sobre los enlaces */
+.submenu li a:hover {
+    background-color: #d54e21;
+}
+
+/* Coloca las profesiones en 3 columnas de manera organizada */
+.submenu li:nth-child(1),
+.submenu li:nth-child(2),
+.submenu li:nth-child(3) {
+    grid-column: span 1; /* Primera fila */
+}
+
+.submenu li:nth-child(4),
+.submenu li:nth-child(5),
+.submenu li:nth-child(6) {
+    grid-column: span 1; /* Segunda fila */
+}
+
+.submenu li:nth-child(7),
+.submenu li:nth-child(8),
+.submenu li:nth-child(9) {
+    grid-column: span 1; /* Tercera fila */
+}
+
+/* El último elemento (Minero) se muestra en su propia fila */
+.submenu li:nth-child(10) {
+    grid-column: span 3; /* Ocupa las tres columnas */
+}
+
+
+
+
+
+
+
+
+
+/* Responsive Design: Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Hace que el menú sea vertical */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Aumenta el margen entre los elementos del menú */
+    }
+
+    .titulo {
+        font-size: 2.5em; /* Ajusta el tamaño de la fuente en pantallas pequeñas */
+        padding: 15px 30px;
+    }
+
+    .presentacion {
+        width: 80%; /* Aumenta el ancho de la sección de presentación */
+        font-size: 1.1em; /* Ajusta el tamaño de la fuente */
+    }
+}
+
+/* Para pantallas aún más pequeñas (teléfonos) */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 2em; /* Ajusta el tamaño de la fuente aún más */
+        padding: 10px 20px;
+    }
+
+    .presentacion {
+        width: 90%; /* El ancho de la sección es más grande en pantallas muy pequeñas */
+        font-size: 1em; /* Ajusta el tamaño de la fuente */
+    }
+}
+
+/* Estilo para la página de detalles de Vigilante */
+.contenido {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 30px;
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #000;
+    text-align: center;
+}
+
+.imagen-detalles {
+    width: 30%;
+    margin-top: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #000;
+}
+
+.imagen-detalles-larga {
+    width: 25%;
+    margin-top: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* A partir de aquí el css de razas*/
+
+
+
+
+
+/* ORIENTAL */
+
+
+.oriental-contenedor {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+/* Fondo estilo meridional */
+.oriental-bg {
+    background-image: url('{{ url_for("static", filename="images/oriental.png") }}');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+/* Imagen a la izquierda */
+.oriental-imagen {
+    flex: 1 1 240px;
+    max-width: 300px;
+}
+
+.oriental-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Tarjetas a la derecha */
+.oriental-tarjetas {
+    flex: 2 1 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Tarjeta individual */
+.oriental-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.oriental-card:hover {
+    transform: translateY(-3px);
+}
+
+.oriental-card h2 {
+    font-size: 1.1em;
+    color: #f2d8b6;
+    margin-bottom: 8px;
+}
+
+.oriental-card p,
+.oriental-card ul {
+    font-size: 0.9em;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.oriental-card ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .oriental-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .oriental-imagen,
+    .oriental-tarjetas {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

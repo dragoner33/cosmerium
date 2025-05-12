@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comerciante - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Comerciante Ambulante</h1>
+        <p>"¡Piezas baratas! ¡De todo tipo! ¡Para todos los modelos! Joder, hoy no estoy vendiendo una mierda, maldito gobierno, ¡¿Cómo demonios voy a poder pagar mis deudas?! Agh..." — Mikel, Vendedor de piezas</p>
+        <p>¡Nunca lo olvides! Ni el bueno es tan bueno, ni el malo es tan malo, aquí prevalecen los intereses propios. </p>
+		<p><strong>Competencia: </strong>Persuasión</p>
+		<!--<p><strong>Recuerdo: </strong><em> El trasfondo no define el pasado de tu PJ, es un recurso genérico que lo clasifica para recibir competencias tomando un trasfondo que más se puede acercar o asimilar por su historia. </em></p>-->
+		<img src="{{ url_for('static', filename='images/comerciante.jpg') }}" alt="Comerciante" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

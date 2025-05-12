@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meretriz - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Meretriz</h1>
+        <p>
+			"En la penumbra dorada del deseo y el perfume caro, ella no vende su cuerpo, sino la fantasía de un mundo donde el pecado se viste de seda y el poder se oculta tras una sonrisa carmesí." — Anónimo
+		</p>
+        <p>
+		Su dulzura enamora a cualquier persona, dueñas de los burdeles, dueñas de los corazones de tanto hombres como de mujeres que quieren despejarse de los arduos días de trabajo. Sus hogares, los burdeles están llenos de las más caras joyas, incluso se podría decir que más joyas y más caras que algunas familias de las altas esferas. 
+Sus dulces caricias, sus fugaces movimientos hacen que incluso los más cerrados y negados disfruten, hablen y satisfagan sus más íntimos placeres, por muy oscuros y perversos que sean, al final, el dinero mueve las masas y ellas son dueñas de vuestro dinero.
+		</p>
+		<p>El oficio del gremio de las meretrices es algo duro, lascivo y fuera de lo común y mundano de la sociedad, suelen regodearse con personas de incluso las más altas esferas, por lo tanto no se tolerarán faltas de comportamiento y modales, pues somos damas y caballeros listos para quitarles el estrés a las personas de la manera que tan bien sabemos. Si quieres unirte a nuestro sofisticado gremio, 
+			<strong>
+				búscanos en cualquier burdel.
+			</strong>
+		</p> 
+ <img src="{{ url_for('static', filename='images/meretriz.png') }}" alt="Meretriz" class="imagen-detalles-larga">
+    </div>
+
+</body>
+</html>

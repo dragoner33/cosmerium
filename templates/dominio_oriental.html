@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humano - Dominio Oriental</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="raza">
+
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <h1>Humano | Dominio Oriental</h1>
+
+    <div class="oriental-contenedor">
+        <div class="oriental-imagen">
+            <img src="{{ url_for('static', filename='images/oriental.png') }}" alt="Oriental">
+        </div>
+
+        <div class="oriental-tarjetas">
+            <div class="oriental-card">
+                <h2>Región</h2>
+                <p>
+                    El Dominio Oriental ha florecido como una zona de transición entre la cultura urbana de Elendel y los territorios más rústicos e incluso extranjeros. New Seran, la ciudad más importante de esta región, es conocida por su arquitectura ornamentada, su arte, sus jardines elevados, y una sociedad que valora la estética, el lujo y la conversación. 
+                    Esta mezcla de influencias ha dado lugar a una etnia físicamente diversa, con rasgos que reflejan generaciones de mezcla y migración.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Características físicas</h2>
+                <ul>
+                    <li><strong>Tonos de piel:</strong> Desde piel oliva clara hasta tonos dorados y canela.</li>
+                    <li><strong>Cabello:</strong> Negro, castaño, pelirrojo y hasta rubio en zonas más elevadas.</li>
+                    <li><strong>Ojos:</strong> Marrones claros, verdes oliva, ámbar y violetas apagados en linajes raros.</li>
+                    <li><strong>Estatura:</strong> Promedio 165–180 cm.</li>
+                    <li><strong>Esperanza de vida:</strong> 80–90 años</li>
+                </ul>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Rasgos culturales</h2>
+                <p>
+                    <strong>Vestimenta:</strong> Colores vivos, tejidos finos y patrones florales o geométricos. Túnicas ligeras, capas decoradas, sombreros amplios.<br>
+                    <strong>Religión:</strong> Devoción a Armonía con enfoque más filosófico y tolerante.<br>
+                    <strong>Actitudes:</strong> Abiertos, sofisticados, excéntricos. Valoran el arte, la música, la conversación refinada y las conexiones sociales.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Notas para el rol</h2>
+                <p>
+                    Un personaje del Dominio Oriental puede sentirse como un “extranjero refinado” en Elendel. Pueden ser comerciantes, artistas, embajadores o exploradores, con vestimenta elegante y una visión global del mundo.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

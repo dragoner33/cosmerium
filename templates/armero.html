@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armero - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Armero</h1>
+        <p>"Cada arma que forjo no es para la guerra, sino para recordar que la paz debe ser defendida con manos firmes y corazones claros." —Edward Thorne, armero de Elendel.</p>
+        <p>Los armeros, una profesión necesaria, tanto para la sociedad como para armar a nuestros cuerpos y fuerzas de seguridad. Estas personas con conocimientos armamentísticos casi perfectos pudieron hacer la sociedad un pelín más segura para todos, pero a la par, más peligrosa para quienes tienen menos recursos pues tanto los vigilantes como los criminales, se armaron con ellas.
+Las balas de pólvora y los casquillos de aleación de aluminio no ferroso, los mecanismos de las armas hechos de metal forjado no ferroso del mismo estilo que los casquillos hacen estas armas perfectas para el uso común, además están lubricadas por un aceite perfecto y son acompañadas de mirillas hechas con cristales de tal manera que hacían que los kilómetros fueran simplemente centímetros. </p>
+        <p> Quien esté preparado para iniciar este camino, encuéntranos en la <strong>armería de Elendel</strong>, te esperamos futuro armero.</p>
+		<img src="{{ url_for('static', filename='images/Armero.png') }}" alt="Armero" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

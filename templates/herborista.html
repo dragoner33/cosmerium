@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herborista - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Herborista</h1>
+        <p>"El conocimiento florece en la sombra, donde la paciencia y la curiosidad trabajan en silencio." — Aurelius Thorne</p>
+        <p>Herboristas, magnánimos de la tierra y poseedores del conocimiento astral de la botánica, pioneros de las medicinas más comunes de la época, sin ellos la medicina y varias sustancias que a día de hoy se usan para la piel y la moda, sin ellos no podrían haber existido. Muchos herboristas decían que las plantas eran la representación de entidades superiores, pero aún nadie ha desmentido este rumor.
+			Los herboristas aman su trabajo, mezcla tanto la práctica como la sabiduría, la dualidad perfecta y eso ha sido así desde hace mucho mucho tiempo... Y así seguirá.</p>
+        <p> Si quieres unirte a la sabiduría y la práctica, siguiendo la senda botánica, porfavor, ven con nosotros, te enseñaremos este mundo, encuéntranos en cualquier<strong> botica,</strong>  las plantas y macetas te esperan.</p>
+		<img src="{{ url_for('static', filename='images/herborista.png') }}" alt="Herborista" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

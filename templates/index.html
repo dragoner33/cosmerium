@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cosmerium</title>
+    <link rel="stylesheet" href="/static/css/style.css">  <!-- Enlace al CSS -->
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <!-- Título principal -->
+    <div class="titulo">
+        Cosmerium era II
+    </div>
+
+    <!-- Sección de presentación -->
+    <div class="presentacion">
+        “Escribo estas palabras en acero, pues todo lo que no esté grabado en metal es indigno de confianza”
+    </div>
+	
+</body>
+</html>

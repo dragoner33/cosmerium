@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cazarrecompensas - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+	
+    <div class="contenido">
+        <h1>Cazarrecompensas</h1>
+        <p>
+		"Los hombres como yo no buscamos justicia ni gloria; solo perseguimos sombras con precio, y al final del día, dormimos con nuestros pecados bien contados." — Horace Drevall
+		</p>
+        <p>Los cazarrecompensas son los encargados de cazar a las personas que traspasen la ley o personas por encargo específico. Sus vidas son duras, monótonas, pero muy lucrativas, pero a la par, muy peligrosas pues sus vidas suelen pender de un hilo por la cantidad de enemigos que se agencian a lo largo de sus pobres y cortas vidas. </p>
+		<p>Si crees que tienes las agallas para ser un cazarrecompensas, espero que estés atento a las consecuencias fatales que puedes tener a lo largo de tu vida, pues siempre habrá alguien observándote, villanos, policía e incluso políticos, pues tu únicamente eres un peón reemplazable, pero bueno, si aún así quieres seguir siéndolo, 
+		<strong>pilla un contrato y reclama tu recompensa.</strong>
+		</p> 
+ <img src="{{ url_for('static', filename='images/cazarrecompensas.png') }}" alt="Cazarrecompensas" class="imagen-detalles-larga">
+    </div>
+
+</body>
+</html>

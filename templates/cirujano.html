@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirujano - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Cirujano</h1>
+        <p>"En las manos del cirujano se debaten la vida y la muerte, y en cada corte no hay sólo sangre, sino el eco silencioso del coraje humano enfrentando su fragilidad." — Théodore Lemoine, “Reflexiones desde el bisturí”</p>
+        <p>Cirujanos, expertos en salvar vidas, curar lo incurable y investigar lo desconocido. Su arte transciende más allá de conocimientos comunes y mundanos sobre los tan conocidos primeros auxilios, estas personas son las más importantes de nuestra sociedad, no hacen cosas estéticas, no hacen simples tratamientos inefectivos, estas personas, anónimas mayormente, sin reconocimiento social son las encargadas de salvar nuestras vidas, las vidas de nuestros hijos y salvaguardar la integridad física de nuestras familias.
+Desde la operación más simple hasta la operación más compleja, estos héroes son nuestro futuro y nuestro pasado, pero por hoy, son nuestro presente.</p>
+        <p>No todo el mundo vale para ser cirujano, es una vocación que sale de dentro de cada corazón humano, por eso si sientes que perteneces a este mundo, si sientes unas ganas de salvar vidas incontenibles, <strong>ven, acércate, muéstrate en nuestras oficinas y te ofreceremos un puesto.</strong>"El bisturí y los fórceps te esperan, caballero."</p>
+		<img src="{{ url_for('static', filename='images/Cirujano.png') }}" alt="Cirujano" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabernero - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Tabernero</h1>
+        <p>
+			"Entre el rugido de las risas y el tintinear de las jarras, el tabernero es confesor, alquimista y guardián del fuego que alivia las penas del alma." — Edgar Willoughby, “Crónicas del Hogar y la Cerveza"
+		</p>
+        <p>
+		Los taberneros como dijo una vez un viejo obrador de este gremio, los taberneros son los guardianes del fuego, libradores de las penurias y confesores de los pecados, pues con la embriaguez de sus bebidas, cócteles y brebajes especiales hacen que incluso los más discretos, los más silenciosos y los más tímidos hablen sin tapujos, se diviertan y disfruten con sus compañeros de bebida del momento, el único momento del día donde pueden despejarse de las ideas.
+		</p>
+		<p>Si quieres servir a tu comunidad, encuéntranos en 
+			<strong>
+				cualquier taberna
+			</strong>, te entrenaremos en este oficio tan necesario para equilibrar el estrés, siempre hay que tener a mano tu botella favorita, ¿No?
+		</p> 
+ <img src="{{ url_for('static', filename='images/tabernero.png') }}" alt="Tabernero" class="imagen-detalles-larga">
+    </div>
+
+</body>
+</html>

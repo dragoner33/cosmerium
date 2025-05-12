@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cazador - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Cazador</h1>
+        <p>
+			"El cazador no sólo rastrea la presa, sino que mide su temple en la soledad del bosque, donde cada disparo resuena como un eco del destino." — Arthur Dayne
+		</p>
+        <p>
+		Los cazadores son personas especializadas para cazar hasta las presas más peligrosas de todas. Son maestros en el manejo del cuchillo, manejo del arma y cuentan con una vista de águila capaces de discernir sus presas desde varios cientos de metros. Son maestros de la caza, muy diestros en el arte del desuello y las ventas, pues al final siempre que cazas, tienes que vender.
+		</p>
+		<p>No creo que quieras desempeñar nuestro trabajo, no te veo capaz de ello, pero si eres tosco, resistente y con buena vista, 
+		<strong>
+				 ven y pruébate en un día de caza,
+			</strong>
+			si duras más de un día, te quedas y si no... Bueno, eso ya te lo puedes esperar.
+		</p> 
+ <img src="{{ url_for('static', filename='images/cazador.png') }}" alt="Cazador" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

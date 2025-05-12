@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actor - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Actor de Taberna</h1>
+        <p>"¡Señoras y señores! Es hora de bailar, que todo el mundo se junte con su amante, mujer, conocida o amigo y todos juntos disfrutemos de este momento al lado de la persona que más queremos el día de hoy, ¡Puede ser la cerveza para los más osados!  ¡A bailar!" — Darren, El bufón</p>
+        <p>¡Nunca lo olvides! Rían, rían y sean alegres, porque hay que disfrutar los momentos únicos, tal vez no vuelvan a reír hasta que el sol nazca de nuevo, o tal vez nunca más lo hagan.</p>
+		<p><strong>Competencia: </strong>Actuar</p>
+		<!--<p><strong>Recuerdo: </strong><em> El trasfondo no define el pasado de tu PJ, es un recurso genérico que lo clasifica para recibir competencias tomando un trasfondo que más se puede acercar o asimilar por su historia. </em></p>-->
+		<img src="{{ url_for('static', filename='images/actor.jpg') }}" alt="Actor" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

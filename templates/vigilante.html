@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigilante - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Vigilante</h1>
+        <p>"El crimen cambia de rostro, pero no de esencia. Donde haya sombras, allí estaremos nosotros, firmes como el deber y pacientes como el tiempo." — Inspector Alaric Graves</p>
+        <p>Guardias del orden, investigadores de misterios, son los encargados de hacer cumplir la ley. Personas rectas, con gran sentido del deber y con una personalidad implacable son quienes mantienen las calles diurnas sanas y salvas del horror y el terror de los crímenes de hoy en día. Los deberes de los vigilantes son distintos, variopintos, desde rutinas normales de patrullaje, hasta investigaciones específicas de crímenes atroces y viscerales. 
+Estas personas son nuestros guardias, nuestros protectores, nuestros guías y nuestros faros de luz, sin ellos la anarquía y el caos dominarían la ciudad y todos estaríamos en peligro.</p>
+		<p>Aquellos con el mismo sentido del deber, presentarse en las <strong>oficinas de reclutamiento</strong>, te esperamos con los brazos abiertos.</p> 
+ <img src="{{ url_for('static', filename='images/vigilante.png') }}" alt="Vigilante" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

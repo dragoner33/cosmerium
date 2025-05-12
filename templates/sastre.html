@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sastre - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Sastre</h1>
+        <p>"El hilo une lo que el tiempo intenta deshilachar; cada puntada es resistencia silenciosa contra el olvido." — Thaddeus Crowe, sastre del viejo barrio</p>
+        <p>Los sastres, magnánimos de la tela, perfeccionistas del hilo y hábiles constructores de costuras, su historia se remonta desde hace mucho tiempo, donde la moda empezó a tener un impacto social bastante importante pues todo el mundo quería verse perfecto, vestir elegante, tanta importancia se le dio a este gremio que incluso fueron participantes de desarrollo de prendas resistentes a cortes, a golpes e incluso a las poderosas armas, actualmente lideran el mundo de la moda y salud pues sus prendas salvan vidas.
+ La alta esfera social hizo que la costura y el bordaje se desarrollase e innovase nuevos patrones, nuevas remesas confeccionadas por los más altos y hábiles sastres de la época y por lo tanto, la imagen de la sastrería aumentó y rozó las altas clases, quedándose ahí hasta el fin de la moda.</p>
+        <p>Si realmente quieres aprender este oficio, pertenecer al gremio más importante de la época, <strong>búscanos y aplica por tu vacante</strong>, el hilo y la aguja te espera.</p>
+		<img src="{{ url_for('static', filename='images/Sastre.png') }}" alt="Sastre" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrisano  Dominio de Terris</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="raza">
+
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <h1>Terrisano | Dominio de Terris</h1>
+
+    <div class="oriental-contenedor">
+        <div class="oriental-imagen">
+            <img src="{{ url_for('static', filename='images/terrisano.png') }}" alt="Terrisano">
+        </div>
+
+        <div class="oriental-tarjetas">
+            <div class="oriental-card">
+                <h2>Región</h2>
+                <p>
+					El Dominio de Terris es una región montañosa y apartada en el norte de Scadrial, considerado por muchos el corazón espiritual del mundo. Su gente —los Terrisanos— desciende de una línea antigua y resistente que sobrevivió incluso a la opresión sistemática del Lord Legislador, quien temía su habilidad única: la feruquimia.
+					Con el Catacendro y la llegada de Armonía, el pueblo terrisano ha recuperado su dignidad y ha vuelto a ocupar un lugar central en los asuntos religiosos, educativos y sociales de Scadrial. Muchos de ellos sirven como consejeros espirituales, eruditos, cuidadores de registros y líderes comunitarios.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Características físicas</h2>
+                <ul>
+                    <li><strong>Tonos de piel:</strong> Oscura/morena, de marrón medio/café.</li>
+                    <li><strong>Cabello:</strong>Negro o muy oscuro, generalmente liso o ligeramente ondulado. Peinados simples, a menudo recogidos.</li>
+                    <li><strong>Ojos:</strong>Marrón oscuro o negro. Mirada serena, introspectiva.</li>
+                    <li><strong>Estatura:</strong> Promedio 175–198 cm.</li>
+                    <li><strong>Esperanza de vida:</strong> 85–100 años</li>
+                </ul>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Rasgos culturales</h2>
+                <p>
+                    <strong>Vestimenta:</strong>Sencilla pero limpia. Túnicas, capas con ribetes, adornos mínimos. Los colores tienden al gris, marrón, blanco y azul oscuro. Se valora la modestia y la funcionalidad.<br>
+                    <strong>Religión:</strong>Fieles a Armonía, pero con un enfoque más íntimo, casi filosófico. La espiritualidad y el conocimiento van de la mano. A menudo sirven como guías morales.<br>
+                    <strong>Actitudes:</strong>Serenos, pacientes, observadores. No buscan el conflicto, pero pueden ser firmes defensores de sus valores. Tienen una memoria colectiva muy fuerte y un fuerte sentido de la herencia.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Notas para el rol</h2>
+                <p>
+					<li> Si deseas que tu personaje sea un Nacidoble (o Feruquimico)— es decir, alguien con una habilidad alomántica y una habilidad feruquímica — debes indicar que tiene sangre terrisiana en su linaje.
+					Esto puede ser total o parcial, ya que con la migración posterior al Catacendro, muchas familias mezclaron su herencia con otras regiones.
+					La conexión con Terris es fundamental, ya que la feruquimia solo se transmite por la línea terrisana.</li>
+					<li>Un personaje con sangre terrisana puede haber nacido en Elendel, en los Territorios Exteriores, o incluso en el Dominio Oriental, pero deberá justificar algún ancestro proveniente de Terris. Esto añade profundidad a la historia personal y fortalece la coherencia con el lore.</li>
+					<li>Los personajes terrisanos son ideales para roles como: eruditos, archivistas, cuidadores del conocimiento, clérigos de Armonía, mentores, diplomáticos o estudiosos de las artes metálicas.    </li>
+				</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

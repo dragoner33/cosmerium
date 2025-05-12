@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medico - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <div class="contenido">
+        <h1>Médico</h1>
+        <p>"¡Alumnos! Hoy tenemos una operación muy especial, muy común hoy en día. Hoy serraremos un hueso y por lo tanto, quiero que estéis muy atentos del procedimiento, hoy uno de vosotros bajará a practicar, ¿Quién se presenta como candidato?" — Alfred, Profesor de medicina</p>
+        <p>¡Nunca lo olvides! Dicen que es peor el remedio que la enfermedad, pero cada uno es libre de elegir lo que quiere hacer.</p>
+		<p><strong>Competencia: </strong>Medicina</p>
+		<!--<p><strong>Recuerdo: </strong><em> El trasfondo no define el pasado de tu PJ, es un recurso genérico que lo clasifica para recibir competencias tomando un trasfondo que más se puede acercar o asimilar por su historia. </em></p>-->
+		<img src="{{ url_for('static', filename='images/medico.jpg') }}" alt="Medico" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

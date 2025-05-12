@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardia - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+	
+    <div class="contenido">
+        <h1>Guardia Callejero</h1>
+        <p>"En la luz del día y el oscurecer del anochecer, los guardias que patrullan las calles hacen que me sienta un poco más seguro, pero no siempre lo hacen, a veces miran su propio trasero, joder, no son tontos y cuando ven cosas donde pueden morir, ¡Ojo, yo incluido! Giran la cabeza para por una vez más, ver a su familia en casa, aunque yo estoy hasta los cojones de estos bandidos, así no puedo vender puñetas." — Mark, Vendedor del pueblo</p>
+        <p>¡Nunca lo olvides! Siempre hay otro secreto más. </p>
+		<p><strong>Competencia: </strong>Intimidar</p>
+		<!--<p><strong>Recuerdo: </strong><em> El trasfondo no define el pasado de tu PJ, es un recurso genérico que lo clasifica para recibir competencias tomando un trasfondo que más se puede acercar o asimilar por su historia. </em></p>-->
+		<img src="{{ url_for('static', filename='images/guardia.jpg') }}" alt="Guardia" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

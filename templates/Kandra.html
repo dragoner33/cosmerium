@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kandra</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="raza">
+
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <h1>Kandra</h1>
+
+    <div class="oriental-contenedor">
+        <div class="oriental-imagen">
+            <img src="{{ url_for('static', filename='images/kandra.png') }}" alt="Kandra">
+        </div>
+
+        <div class="oriental-tarjetas">
+            <div class="oriental-card">
+                <h2>Descripción</h2>
+                <p>
+					Los kandra son una raza de seres metamórficos, capaces de cambiar de forma al consumir las restos de cadáveres y adoptar su apariencia. Son criaturas extremadamente inteligentes, serviles, y leales, cuyas existencias fueron forjadas bajo la voluntad del Lord Legislador para servirle a él y su propósito.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Características físicas</h2>
+				<p>
+					El kandra no tiene una forma física fija. Su cuerpo es de una sustancia gelatinosa y viscosa que les permite cambiar a cualquier forma que deseen, siempre y cuando tengan restos humanos o animales para replicar que hayan consumido.
+				</p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>La Naturaleza de los Kandra:</h2>
+                <p>
+                    <strong>Bendiciones:</strong> Los kandra poseen una habilidad única llamada Bendición. Son criaturas que reciben poderes especiales a través de la hemalurgia, permitiéndoles cambiar de forma y mucho más. Las Bendiciones son una parte integral de su ser y su poder. La Bendición que todo kandra posee es la Bendición de la Consciencia, que es lo que le permite ascender de Espectro de la Bruma a Kandra.<br>
+                    <strong>Lealtad:</strong>Los kandra están obligados a servir al Lord Legislador o a sus sucesores, según las reglas del Primer Contrato. Su lealtad es inquebrantable, aunque tras la caída del Lord Legislador, algunos kandra buscaron servir a Armonía o incluso a otros poderes.<br>
+                    <strong>Contratos:</strong> Los Kandra viven por y para los contratos, tú eres libre de escoger el contrato, pero no puedes vivir sin contrato, debes ir de contrato en contrato, debes tener siempre uno o sino debes regresar a la Tierra Natal. A pesar de ello, se ciñen a sus contratos sin rechistar, y a menudo son utilizados como espías por la nobleza. Cumplir los contratos es su forma de «pagar por su libertad» para evitar que los humanos busquen formas de esclavizarlos de otras maneras y descubran su debilidad a la shhhhhh. Los términos de un contrato siempre prohíben a un kandra matar a un humano, cambiar de cuerpo sin permiso y revelar secretos kandra.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>El Espectro de la Bruma y la Bendición de la Consciencia</h2>
+                <p>
+					Cuando un kandra recibe la Bendición de la Consciencia durante su nacimiento, se convierte en parte de un sistema que clasifica a los kandra según las generaciones que han vivido. Este proceso está relacionado con la influencia del Lord Legislador, por lo tanto, dejan de ser meros Espectro de la bruma al ganar consciencia mediante la Bendición de la Consciencia.     
+				</p>
+            </div>
+			
+			<div class="oriental-card">
+                <h2>Las Generaciones de los Kandra</h2>
+                <p>
+					Los kandra están clasificados en varias Generaciones que corresponden a la época en la que nacieron, dejando de ser Espectros de la Bruma. Cada Generación tiene distintas características y roles en la sociedad kandra, lo que influye en su jerarquía y en sus relaciones con los demás kandra.<br>
+					<h2>Generación I - Los Kandra Originales</h2>- Los más antiguos y sabios. <br>
+						- Son los kandra que nacieron bajo el Lord Legislador antes de su caída. Están completamente alineados con la antigua voluntad del Lord Legislador. <br>	
+						- Tienen un vasto conocimiento de la historia de los kandra y de las órdenes que les fueron dadas. Son los que sostienen las tradiciones más antiguas y las leyes fundamentales del Primer Contrato. <br>	
+						- Líderes de la jerarquía: Son respetados como los fundadores de la raza y se consideran los más poderosos. Su palabra tiene peso y su autoridad es indiscutible.<br>
+                    <h2>Generación II - Los Kandra de la Transición</h2>- Nacidos justo después de la caída del Lord Legislador.<br>
+						- Estos kandra han experimentado el cambio de régimen entre el Lord Legislador y la influencia de Armonía.<br>
+						- Son los que tienen el conocimiento del antiguo régimen y la transición hacia un sistema más libre y con reglas más ambiguas impuestas por Armonía.<br>
+						- Vínculo fuerte con los kandra antiguos, pero también una adaptación a las nuevas formas de pensar tras la caída del Lord Legislador. Aunque siguen siendo muy poderosos, se sienten más divididos.<br>
+                    <h2>Generación III - Kandra Modernos (A partir de aquí podéis crear vuestro personaje.)</h2> - Son los kandra más jóvenes.<br>
+						- Nacieron tras el Catacendro, en una era marcada por la influencia de Armonía y los cambios en la sociedad scadriana.<br>
+						- Son más independientes y autónomos, con una perspectiva más abierta a la autodefinición. A menudo cuestionan las antiguas costumbres y se sienten atraídos por explorar el mundo más allá de los límites impuestos por el Primer Contrato.<br>
+						- A pesar de ser menos experimentados que los de Generación I y II, tienen una gran flexibilidad para adaptarse a los cambios y, por lo tanto, son muy poderosos en su propia forma.
+					<h2>Generación IV - Kandra Exiliados o Renegados</h2>- Los kandra que nacen en esta generación suelen ser los que, por alguna razón, han sido exiliados o han abandonado el servicio al Lord Legislador. <br>
+						- Estos kandra suelen estar en conflicto con las leyes tradicionales y tienen una identidad más fluida.<br>
+						- A menudo no siguen las normas del Primer Contrato y actúan como nómadas o renegados, buscando su propia libertad, o en ocasiones se alían con otras facciones, incluidos los humanos. 
+				</p>
+            </div>
+			
+			<div class="oriental-card">
+                <h2>Cultura y Jerarquía:</h2>
+                <p>
+					La sociedad kandra está estructurada jerárquicamente según las Generaciones, pero también existe una fuertes dinámicas de poder dentro de cada generación. Los miembros más antiguos tienen un estatus alto y son respetados, pero los kandra más jóvenes a menudo buscan formas de desafiar el antiguo orden y tomar un camino más independiente.
+				</p>
+            </div>
+			
+			<div class="oriental-card">
+                <h2>Impacto de la Inmortalidad en la Cultura Kandra:</h2>
+                <p>
+					La inmortalidad de los kandra hace que su visión del tiempo y el progreso sea completamente diferente a la de los humanos. Los kandra no sienten urgencia por el futuro de la misma forma, ya que pueden vivir miles de años sin cambios significativos en su existencia.<br>
+					Sin embargo, esta longevidad también puede ser un peso emocional. Los kandra pueden llegar a sentirse desconectados de las generaciones más jóvenes, incapaces de entender los problemas de los mortales que nacen, viven y mueren en el mismo periodo de tiempo.
+				</p>
+            </div>
+			
+			<div class="oriental-card">
+                <h2>El Primer Contrato: El Código de los Kandra</h2>
+                <p>
+					El Primer Contrato es el código legal y moral que los kandra deben seguir. Se presenta como un conjunto de leyes divinas que fueron impuestas por el Lord Legislador para asegurar su sumisión y control. Este contrato es tanto una guía espiritual como un conjunto de reglas operacionales.<br>
+					<h2>1. Máxima dedicación al Lord Legislador:</h2>- Los kandra están obligados a servir al Lord Legislador y seguir sus órdenes sin cuestionarlas. <br>
+						- Armonía, tras la caída del Lord Legislador, introduce un conflicto en la lealtad de los kandra, pero muchos continúan buscando la voluntad de su creador como el principal propósito de su existencia. <br>	
+                    <h2>2. Salvaguardar el Atium:</h2>- El atium es de vital importancia para los kandra, y deben protegerlo como un deber primordial.<br>
+						- El atium es uno de los componentes esenciales que permite a los kandra mantenerse poderosos y cumplir su rol.<br>
+					<h2>3. Prohibición de asesinato de humanos:</h2> - A pesar de su naturaleza cambiante y su capacidad para la manipulación, los kandra no pueden asesinar a humanos.<br>
+						- Sin embargo, pueden matar a otros kandra si es necesario, lo que implica que existen conflictos internos y luchas de poder entre ellos.<br>
+					<h2>4. Derechos de los kandra:</h2>- Aunque están sujetos a un control estricto, los kandra tienen derechos legales dentro de su comunidad. <br>
+						- Tienen el derecho de defenderse si son acusados de crímenes, especialmente ante la Primera Generación de kandra, la cual actúa como jueces.<br>
+					<h2>5. Creación de nuevos kandra:</h2>- El proceso para crear un nuevo kandra está especificado en el contrato. Generalmente, este proceso involucra tomar el cadáver de un humano muerto y impregnarlo con la esencia de un kandra. <br>
+                    <h2>6. No cambiar de cuerpo sin permiso:</h2>- El kandra debe obtener permiso para cambiar de cuerpo o formar nuevas identidades bajo la forma de otra persona.<br>
+					<h2>7. No revelar secretos kandra:</h2> - Los kandra deben mantener el secreto de su naturaleza y origen ante los humanos.<br>
+						- Sin embargo, pueden matar a otros kandra si es necesario, lo que implica que existen conflictos internos y luchas de poder entre ellos.<br>
+					<h2>8. Regresar a la Tierra Natal:</h2>- Si el kandra rompe el contrato o si su amo muere antes de que el contrato expire, el kandra debe regresar a la Tierra Natal para evitar sanciones o castigos. <br>
+					<h2>9. La Resolución:</h2>- La Resolución es un concepto profundamente arraigado en los kandra. Si el Regreso de Ruina es inminente, los kandra deben despojarse de sus Bendiciones para evitar que Ruina error de lecutra. Esto los convierte en espectros de la bruma, sin poder ni memoria. <br>
+						- Este procedimiento ha ocurrido solo una vez, y solo algunos kandra han experimentado este proceso. <br>
+					<br>	
+					<strong>(Incumplir cualquier apartado del contrato o del sistema Kandra te pondrá en riesgo, haciendo que seas juzgado por las Primeras Generaciones y arriesgándote al CK.) </strong>
+				</p>
+            </div>
+			
+			<div class="oriental-card">
+                <h2>Notas para el rol: </h2>
+                <p>
+					- Un personaje kandra debe respetar el Primer Contrato, que implica obedecer los términos del contrato individual firmado con un humano. Incumplirlo puede llevar a castigos severos, incluida la ejecución por su propia especie. <br>
+					- Como kandra, no puedes asesinar humanos, cambiar de cuerpo sin permiso ni revelar secretos sobre tu raza. Estas reglas son inquebrantables y forman parte de su identidad legal y moral.<br>
+					- Los kandra son inmortales, y su longevidad les permite acumular sabiduría, experiencia y cicatrices emocionales. Puedes interpretar a un espía cansado del mundo, un filósofo que duda de Armonía o un sirviente leal que busca redención.<br>
+					- Sienten resentimiento hacia los humanos, pero están obligados a servirles. Este conflicto puede ser una fuente rica de desarrollo personal, desde el odio contenido hasta la admiración inesperada.<br>
+					- Cumplir contratos implica que vives con identidad prestada: imitando a otros, ocultándote y reprimiendo tu verdadero yo. ¿Tu personaje lo acepta como un arte… o como una maldición?<br>
+                    - Como todos los kandra, llevas arraigado el conocimiento de la Resolución: si Ruina regresa, deberás destruir tus bendiciones y convertirte en un espectro de la bruma. Vives con ese deber grabado en tus entrañas.<br>
+					- Los pagos a un Kandra solo pueden ser con Monedas de Oro no con Boxings (aunque representen lo mismo).<br>
+					
+					<strong>(PD: "¿Eso significa que si me como un humano y un gato puedo ser un...?" Si...... puedes.... Y más combinaciones pero recuerda la norma 6 del contrato... </strong>
+				</p>
+            </div>
+			
+			<div class="oriental-card">
+                <p>
+					<strong>
+					IMPORTANTE: Toda esta información es solo de conocimiento Kandra, no podrá ser usado IC a excepción de que tu personaje se entere. Lo único que se sabe IC de los Kandra es que son seres cambiaformas que se contratan para servicios generalmente de espionaje por monedas de oro.
+					Además, dado el tipo de raza que es los Kandra tienen cupo límite en el servidor para que no hayan 100 Kandras y 10 humanos.
+					</strong>
+				</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

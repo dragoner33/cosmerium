@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreador - Cosmerium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+	
+    <div class="contenido">
+        <h1>Rastreador del Dominio</h1>
+        <p>"Tantos días encerrado hilando pruebas hace que me estalle la cabeza, dios, después de esto voy a pillarme unas vacaciones, Agh... Debería buscarme otro trabajo." — Dabiz, Inspector Privado</p>
+        <p>¡Nunca lo olvides! A veces se necesitan más ojos y más oídos que los de la guardia, yo confiaría en ellos, pues no están atados de manos y de pies, son audaces e inteligentes, aunque no son aptos para todo tipo de bolsillos, recuérdalo muchacho.
+		<p><strong>Competencia: </strong>Rastrear</p>
+		<!--<p><strong>Recuerdo: </strong><em> El trasfondo no define el pasado de tu PJ, es un recurso genérico que lo clasifica para recibir competencias tomando un trasfondo que más se puede acercar o asimilar por su historia. </em></p>-->
+		<img src="{{ url_for('static', filename='images/rastreador.jpg') }}" alt="Rastreador" class="imagen-detalles">
+    </div>
+
+</body>
+</html>

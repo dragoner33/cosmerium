@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humano - Dominio Meridional</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="raza">
+
+    <div id="menu"></div>
+	<script>
+	  fetch('/menu')
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById('menu').innerHTML = data;
+		});
+	</script>
+
+    <h1>Humano | Dominio Meridional</h1>
+
+    <div class="oriental-contenedor">
+        <div class="oriental-imagen">
+            <img src="{{ url_for('static', filename='images/meridional.png') }}" alt="Meridional">
+        </div>
+
+        <div class="oriental-tarjetas">
+            <div class="oriental-card">
+                <h2>Región</h2>
+                <p>
+					El Dominio Meridional de Scadrial es radicalmente distinto al resto del continente. Situado más allá de los glaciares que cubrían el planeta antes del Catacendro, fue una región condenada a una congelación perpetua durante el régimen del Lord Legislador. Sólo tras la Ascensión de Armonía pudo su población comenzar a florecer en condiciones habitables, gracias a la invención de tecnología basada en el calor (como las máscaras calefactoras).
+					Los Malwish son la civilización dominante del sur: altamente tecnológicos, organizados en naciones-estado, y con una cultura profundamente influida por su lucha por la supervivencia y su aislamiento del resto del mundo. 
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Características físicas</h2>
+                <ul>
+                    <li><strong>Tonos de piel:</strong> Piel cobriza o dorada, adaptada al reflejo solar del hielo y el frío.</li>
+                    <li><strong>Cabello:</strong> Predomina el negro o castaño oscuro, a menudo peinado hacia atrás o trenzado con elementos ceremoniales.</li>
+                    <li><strong>Ojos:</strong> Colores oscuros (marrón, negro), aunque no es raro ver ojos verdes o ámbar. La mirada suele ser intensa y profunda.</li>
+                    <li><strong>Estatura:</strong> Promedio de 170–185 cm.</li>
+                    <li><strong>Esperanza de vida:</strong> 85–95 años</li>
+                </ul>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Rasgos culturales</h2>
+                <p>
+                    <strong>Vestimenta:</strong> Capas largas, ropas ceremoniales, adornos metálicos y el uso característico de máscaras ornamentales — símbolo de identidad, protección y estatus.<br>
+                    <strong>Religión:</strong> No creen abiertamente en Armonía. Su aislamiento forjó una cosmovisión centrada en la ciencia, la razón y la herencia cultural.<br>
+                    <strong>Actitudes:</strong> Reservados, formales, extremadamente educados pero desconfiados del norte. Tienen una visión nacionalista de sí mismos como los verdaderos supervivientes del antiguo mundo.
+                </p>
+            </div>
+
+            <div class="oriental-card">
+                <h2>Notas para el rol</h2>
+                <p>
+					Un personaje del Dominio Meridional puede sentirse completamente extranjero en el norte. Ya sea como embajador, espía, inventor, comerciante o renegado, llevará consigo una visión del mundo muy diferente.    
+				</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
