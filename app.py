@@ -131,11 +131,6 @@ def comerciante():
 def guardia():
     return render_template('guardia.html')
     
-# Página del Acolito
-@app.route('/acolito')
-def acolito():
-    return render_template('acolito.html')
-    
     
 
 
