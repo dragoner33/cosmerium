@@ -104,7 +104,7 @@ def koloss():
 # Página del Kandra
 @app.route('/kandra')
 def kandra():
-    return render_template('kandra.html')
+    return render_template('Kandra.html')
     
 # Página del Rastreador
 @app.route('/rastreador')
